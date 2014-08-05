@@ -12,14 +12,14 @@
 				padding: 0px;
 			}
 			#ctrl {
-				width: 40%;
+				width: 20%;
 				background-color: rgb(240,240,240);
 				padding: 8px;
 				border-bottom-right-radius: 10px;
 				border-bottom-left-radius: 10px;
 				box-shadow: rgb(100,100,100) 0px 2px 5px;
 				position: absolute;
-				left: 30%;
+				left: 40%;
 				top: 0px;
 			}
 			#map-canvas {
@@ -101,13 +101,6 @@
 			</div>
 			<div class="btn-group dropdown" >
 				<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-sm" style="margin: 0px">
-					<span id='selected_school'>學校</span> <span class="caret"></span>
-				</button>
-				<ul id="schoolmenu" class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dLabel" >
-				</ul>
-			</div>
-			<div class="btn-group dropdown" >
-				<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-sm" style="margin: 0px">
 					<span id='selected_type'>類別</span> <span class="caret"></span>
 				</button>
 				<ul id="typelmenu" class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dLabel" >
@@ -116,6 +109,13 @@
 					<li><a onclick="select_type(4); $('#selected_type').text('英專')">英專</a></li>
 					<li><a onclick="select_type(8); $('#selected_type').text('中輟')">中輟</a></li>
 					<li><a onclick="select_type(16); $('#selected_type').text('圖書')">圖書</a></li>
+				</ul>
+			</div>
+			<div class="btn-group dropdown" >
+				<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-sm" style="margin: 0px">
+					<span id='selected_school'>學校</span> <span class="caret"></span>
+				</button>
+				<ul id="schoolmenu" class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dLabel" >
 				</ul>
 			</div>
 		</form>
