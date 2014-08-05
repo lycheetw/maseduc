@@ -16,6 +16,7 @@ function School(data) {
 	this.stunum = data.stunum;
 	this.stunum_F = data.stunum_F;
 	this.stunum_M = data.stunum_M;
+	this.flag = data.flag;
 	if (data.type=='國小') {
 		this.y1 = data.y1;
 		this.y2 = data.y2;
@@ -84,7 +85,7 @@ function City(city) {
 
 	this.bounds  = new google.maps.LatLngBounds();
 
-	for (var j=0; j<r.length; j++){
+	for (var j=0; j<r.length; j++) {
 		this.schools.push(new School(r[j]));
 		this.bounds.extend(new google.maps.LatLng(r[j].lat, r[j].lng));
 	}
@@ -92,15 +93,17 @@ function City(city) {
 }
 
 City.prototype.showMarker = function () {
-	for (var i=0; i<this.schools.length; i++){
+	for (var i=0; i<this.schools.length; i++) {
+		if ((this.schools[i].flag & type_flag) != 0)
 			this.schools[i].showMarker();
+		else
+			this.schools[i].hideMarker();
 	}
 }
 
 City.prototype.hideMarker = function () {
 	for (var i=0; i<this.schools.length; i++) {
-			this.schools[i].hideMarker();
-			this.schools[i].hideMarker();
+		this.schools[i].hideMarker();
 	}
 }
 

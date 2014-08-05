@@ -106,30 +106,39 @@
 				<ul id="schoolmenu" class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dLabel" >
 				</ul>
 			</div>
+			<div class="btn-group dropdown" >
+				<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-sm" style="margin: 0px">
+					<span id='selected_type'>類別</span> <span class="caret"></span>
+				</button>
+				<ul id="typelmenu" class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dLabel" >
+					<li><a onclick="select_type(65535)">全</a></li>
+					<li><a onclick="select_type(2); $('#selected_type').text('一般')">一般</a></li>
+					<li><a onclick="select_type(4); $('#selected_type').text('英專')">英專</a></li>
+					<li><a onclick="select_type(8); $('#selected_type').text('中輟')">中輟</a></li>
+					<li><a onclick="select_type(16); $('#selected_type').text('圖書')">圖書</a></li>
+				</ul>
+			</div>
 		</form>
 	</div>
 
 </body>
 </html>
 <script>
-
-
+type_flag = 65535;
+selected_city = null;
 
 function select_city(c){
 
-	if (city_list[c]==null) {
+	if (city_list[c] == null) {
 		console.log("loading "+c);
 		city_list[c] = new City(c);
 	}
-
-	schools = null;
+	selected_city = city_list[c];
 
 	$.each(city_list, function(i, v) {
-		if (city_list[i]!=null){
-			if (c==i) {
+		if (city_list[i] != null){
+			if (c == i) {
 				city_list[i].showMarker();
-				schools = city_list[i].schools;
-
 			}
 			else {
 				city_list[i].hideMarker();
@@ -138,15 +147,15 @@ function select_city(c){
 
 	});
 
-	if (schools.length==0) {
+	if (selected_city.schools.length == 0) {
 		alert("載入資料失敗");
 	}
 	else {
-		$("#selected_city").empty().append(c);
+		$("#selected_city").text(c);
 		$("#schoolmenu").empty();
-		$.each(schools,function(i, v) {
+		$.each(selected_city.schools,function(i, v) {
 			$("#schoolmenu").append(
-					"<li><a onclick='schools["+i+"].focus()'>"+schools[i].name+"</a></li>"
+					"<li><a onclick='selected_city.schools["+i+"].focus()'>"+selected_city.schools[i].name+"</a></li>"
 			);
 
 		});
@@ -155,7 +164,10 @@ function select_city(c){
 	}
 }
 
-
+function select_type(type) {
+	type_flag = type;
+	selected_city.showMarker();
+}
 //city_list[index].showMarker();
 //city_list[index].hideMarker();
 </script>

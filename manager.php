@@ -26,15 +26,9 @@ if ($_GET["code"]=="reset") {
 
 else {
 	$code = explode(',',$_GET["code"]);
+	$f = (int)$_GET["flag"];
 	foreach ($code as $key => $value) {
-		$v = (int)$value;
-		if ($v>0)
-			$f = 1;
-		else
-			$f = 0;
-
-		$v = abs($v);
-
+		$v = abs((int)$value);
 		$sql = "UPDATE `basicinfo` SET `flag` = '{$f}' WHERE CONVERT( `basicinfo`.`code` USING utf8 ) = '{$v}' LIMIT 1 ";
 		echo '<br>'.$sql;
 		$mysqli->query($sql);
