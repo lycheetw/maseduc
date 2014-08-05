@@ -104,7 +104,7 @@
 					<span id='selected_type'>類別</span> <span class="caret"></span>
 				</button>
 				<ul id="typelmenu" class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dLabel" >
-					<li><a onclick="select_type(65535)">全</a></li>
+					<li><a onclick="select_type(65535); $('#selected_type').text('全部')">全部</a></li>
 					<li><a onclick="select_type(2); $('#selected_type').text('一般')">一般</a></li>
 					<li><a onclick="select_type(4); $('#selected_type').text('英專')">英專</a></li>
 					<li><a onclick="select_type(8); $('#selected_type').text('中輟')">中輟</a></li>
