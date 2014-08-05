@@ -1,5 +1,7 @@
 maseduc
 =======
-This project will plot elementary schools and junior high schools in Taiwan and show some basic info.
+本專案將全臺中小學的位置打上google map，並列出一些學校的資本資料
 
-The school infomation is collected form http://data.gov.tw/
+目的在提供教育替代役男在選擇學校時的一些參考依據
+
+"校別資料"可以在 http://data.gov.tw/ 獲得
