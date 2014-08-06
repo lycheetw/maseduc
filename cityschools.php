@@ -16,7 +16,7 @@ else
 	$city = $_GET["city"];
 $sql1 = "SELECT * FROM  `basicinfo` LEFT JOIN `elementary101` ON `basicinfo`.`code` = `elementary101`.`code` WHERE `city` = '{$city}' AND `type` = '國小' AND flag >= 1";
 $sql2 = "SELECT * FROM  `basicinfo` LEFT JOIN `junior101` ON `basicinfo`.`code` = `junior101`.`code` WHERE `city` = '{$city}' AND `type` = '國中'  AND flag >= 1";
-
+$sql3 = "SELECT * FROM  `basicinfo` RIGHT JOIN `junior101` ON `basicinfo`.`code` = `junior101`.`code` WHERE `city` = '{$city}' AND `type` = '高中'  AND flag >= 1";
 
 $ary = array();
 
@@ -35,6 +35,19 @@ if ($result = $mysqli->query($sql1)) {
 
 
 if ($result = $mysqli->query($sql2)) {
+
+	/* fetch associative array */
+	while ($row = $result->fetch_assoc()) {
+		$row["lat"] = (float)$row["lat"];
+		$row["lng"] = (float)$row["lng"];
+		array_push($ary,$row);
+	}
+
+	/* free result set */
+	$result->free();
+}
+
+if ($result = $mysqli->query($sql3)) {
 
 	/* fetch associative array */
 	while ($row = $result->fetch_assoc()) {

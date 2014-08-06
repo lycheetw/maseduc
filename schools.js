@@ -30,6 +30,12 @@ function School(data) {
 		this.y2 = data.y2;
 		this.y3 = data.y3;
 		icon = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+	}else if (data.type=='高中') {
+		this.y1 = data.y1;
+		this.y2 = data.y2;
+		this.y3 = data.y3;
+		this.name = this.name+"(國中部)";
+		icon = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
 	}
 
 	this.content = String.format(
