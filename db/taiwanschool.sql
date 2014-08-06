@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- 主機: localhost
--- 建立日期: Aug 06, 2014, 12:31 PM
+-- 建立日期: Aug 06, 2014, 12:42 PM
 -- 伺服器版本: 5.5.27
 -- PHP 版本: 5.2.6
 
@@ -2304,7 +2304,7 @@ INSERT INTO `basicinfo` VALUES ('363606', '市立大同國小', '國小', '臺�
 INSERT INTO `basicinfo` VALUES ('363607', '市立大龍國小', '國小', '臺北市', '臺北市大同區保安里哈密街47號', 25.073401, 121.516709, '(02)25942635', 'http://www.dlps.tp.edu.tw', 1);
 INSERT INTO `basicinfo` VALUES ('363608', '市立延平國小', '國小', '臺北市', '臺北市大同區國慶里昌吉街97號', 25.066026, 121.512502, '(02)25942439', 'http://www.ypps.tp.edu.tw', 1);
 INSERT INTO `basicinfo` VALUES ('363609', '市立大橋國小', '國小', '臺北市', '臺北市大同區隆和里重慶北路3段2號', 25.064281, 121.513434, '(02)25944413', 'http://www.tjps.tp.edu.tw', 1);
-INSERT INTO `basicinfo` VALUES ('371301', '私立立人高中', '高中', '臺北市', '臺北市萬華區桂林路171號', 24.105688, 120.691315, '(02)23113423', 'http://www.lrsh.tp.edu.tw', 1);
+INSERT INTO `basicinfo` VALUES ('371301', '私立立人高中', '高中', '臺北市', '臺北市萬華區桂林路171號', 25.0388054, 121.4966434, '(02)23113423', 'http://www.lrsh.tp.edu.tw', 1);
 INSERT INTO `basicinfo` VALUES ('371601', '私立光仁小學', '國小', '臺北市', '臺北市萬華區壽德里萬大路423巷15號', 25.021446, 121.499656, '(02)23032874', 'http://www.kjes.tp.edu.tw', 1);
 INSERT INTO `basicinfo` VALUES ('373301', '市立華江高中', '高中', '臺北市', '臺北市萬華區日善里西藏路213號', 25.028575, 121.496063, '(02)23019946', 'http://www.hcsh.tp.edu.tw', 1);
 INSERT INTO `basicinfo` VALUES ('373302', '市立大理高中', '高中', '臺北市', '臺北市萬華區綠堤里長順街2號', 25.030861, 121.491204, '(02)23026959', 'http://www.tlsh.tp.edu.tw', 1);
