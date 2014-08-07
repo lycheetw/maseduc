@@ -61,11 +61,11 @@ function School(data) {
 }
 
 School.prototype.showMarker = function () {
-	this.marker.setMap(map);
+	this.marker.setVisible(true);
 }
 
 School.prototype.hideMarker = function () {
-	this.marker.setMap(null);
+	this.marker.setVisible(false);
 }
 
 School.prototype.focus = function () {
