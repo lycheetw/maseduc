@@ -157,10 +157,11 @@ function select_city(c){
 		$("#selected_city").text(c);
 		$("#schoolmenu").empty();
 		$.each(selected_city.schools,function(i, v) {
-			$("#schoolmenu").append(
-					"<li><a onclick='selected_city.schools["+i+"].focus()'>"+selected_city.schools[i].name+"</a></li>"
-			);
-
+			if ((selected_city.schools[i].flag & type_flag) != 0) {
+				$("#schoolmenu").append(
+						"<li><a onclick='selected_city.schools["+i+"].focus()'>"+selected_city.schools[i].name+"</a></li>"
+				);
+			}
 		});
 		map.fitBounds(city_list[c].bounds);
 		map.panToBounds(city_list[c].bounds);
