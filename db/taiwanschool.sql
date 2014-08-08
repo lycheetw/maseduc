@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- 主機: localhost
--- 建立日期: Aug 06, 2014, 12:42 PM
+-- 建立日期: Aug 08, 2014, 12:44 AM
 -- 伺服器版本: 5.5.27
 -- PHP 版本: 5.2.6
 
@@ -2826,7 +2826,7 @@ INSERT INTO `basicinfo` VALUES ('573602', '市立建國國小', '國小', '高�
 INSERT INTO `basicinfo` VALUES ('580301', '國立高師大附中', '高中', '高雄市', '高雄市苓雅區凱旋二路89號', 22.626484, 120.321795, '(07)7613875', 'http://www.nknush.kh.edu.tw', 1);
 INSERT INTO `basicinfo` VALUES ('581301', '私立復華高中', '高中', '高雄市', '高雄市苓雅區民權一路42號', 22.621182, 120.313424, '(07)3344168', 'http://www.fhhs.kh.edu.tw', 1);
 INSERT INTO `basicinfo` VALUES ('581302', '天主教道明中學', '高中', '高雄市', '高雄市苓雅區建國一路354號', 22.63352, 120.323371, '(07)9656100', 'http://www.dmhs.kh.edu.tw', 1);
-INSERT INTO `basicinfo` VALUES ('583301', '市立中正高中', '高中', '高雄市', '高雄市苓雅區中正一路8號', 25.104481, 121.516445, '(07)7491992', 'http://www.cchs.kh.edu.tw', 1);
+INSERT INTO `basicinfo` VALUES ('583301', '市立中正高中', '高中', '高雄市', '高雄市苓雅區中正一路8號', 22.626217, 120.338681, '(07)7491992', 'http://www.cchs.kh.edu.tw', 1);
 INSERT INTO `basicinfo` VALUES ('583501', '市立苓雅國中', '國中', '高雄市', '高雄市苓雅區四維三路176號', 22.618301, 120.306422, '(07)3353307', 'http://www.lyjh.kh.edu.tw', 1);
 INSERT INTO `basicinfo` VALUES ('583502', '市立五福國中', '國中', '高雄市', '高雄市苓雅區五福一路12號', 22.628636, 120.316981, '(07)2223036', 'http://www.wfjh.kh.edu.tw', 1);
 INSERT INTO `basicinfo` VALUES ('583503', '市立大仁國中', '國中', '高雄市', '高雄市苓雅區建國一路148號', 22.632835, 120.329565, '(07)7114302', 'http://www.tjjh.kh.edu.tw', 1);
