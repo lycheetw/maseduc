@@ -1,7 +1,7 @@
 <?
 header("Content-Type:text/html; charset=utf-8");
 
-require("db.cfg");
+require("db/db.cfg");
 
 $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 if ($mysqli->connect_errno) {
